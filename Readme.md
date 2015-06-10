@@ -32,4 +32,8 @@ As a fun exercise, I wanted to create an automatic process for this workflow.
 ## Workflow
 1. Scrape demolition data from [The Portland Chronicle](http://www.portlandchronicle.com/)
 
-2.
+2. Save Address and Permit Issued fields as CSV
+
+3. Conver CSV to GeoJSON using [Mapbox Omnivore](https://github.com/mapbox/leaflet-omnivore)
+
+4. Add point to a leaflet map
