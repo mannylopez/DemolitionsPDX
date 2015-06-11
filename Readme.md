@@ -37,3 +37,21 @@ As a fun exercise, I wanted to create an automatic process for this workflow.
 3. Conver CSV to GeoJSON using [Mapbox Omnivore](https://github.com/mapbox/leaflet-omnivore)
 
 4. Add point to a leaflet map
+
+
+- Ran into unicode problems when trying to write the address data to CSV because it could not write
+
+http://www.joelonsoftware.com/articles/Unicode.html
+https://docs.python.org/2/howto/unicode.html
+
+The scraping script breaks, or returns a unicode value when it encounters a link. In this case, it is the u'\xa0' code which represents a ['non-breaking space'](http://en.wikipedia.org/wiki/Non-breaking_space).
+
+
+I created a test
+```code
+if u'\xa0' in mayTwentyFiveBlock:
+  print "FIX ME"
+```
+to flag events where this happens.
+
+and included a line that replaces those instances within the array with the coordinates for [Null Island](https://github.com/nixta/null-island)

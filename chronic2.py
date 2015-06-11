@@ -9,7 +9,7 @@ mayEighteenHead = tree.xpath('//*[@id="post-2931"]/div/p[3]/strong/text()')
 
 mayEighteenBlock = tree.xpath('//*[@id="post-2931"]/div/div[2]/p/strong/text()')
 
-mayEighteenFoot = tree.xpath('//*[@id="post-2931"]/div/div[2]/p[5]/strong/text()')
+mayEighteenFoot = tree.xpath('//*[@id="post-2931"]/div/div[2]/p/strong/text()')
 
 
 # mayTwentyFiveHead = tree.xpath('//*[@id="post-3022"]/div[1]/p[3]/strong/text()')
@@ -54,3 +54,4 @@ print '     : '
 print 'May 18 Foot: ', mayEighteenFoot
 print '     : '
 print len(mayEighteenFoot)
+
